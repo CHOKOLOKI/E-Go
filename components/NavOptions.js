@@ -1,6 +1,7 @@
 import { FlatList, Image, Text, Touchable, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import tw, { style } from 'twrnc';
+import { Icon } from 'react-native-elements';
 
 const data = [
     {
@@ -19,13 +20,13 @@ const data = [
     
 const NavOptions = () => {
   return (
-    <FlatList 
+    <FlatList
         data={data}
         horizontal
         keyExtractor={(item) => item.id}
         renderItem={({ item }) =>(
             <TouchableOpacity
-                style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-2 w-40`}
+                style={tw`p-12 pl-6 pb-2 pt-2 bg-gray-200 m-2 w-40 rounded-lg`}
             >
                 <View>
                     <Image 
@@ -33,7 +34,12 @@ const NavOptions = () => {
                         source={{uri: item.image}}
                     />
                     <Text style={tw`mt-2 text-lg font-semibold`}>{item.title}</Text>
-                    
+                    <Icon 
+                    // style={tw`p-2 bg-black rounded-full w-10 mt-4`}
+                        // name='arrowright'
+                        // color='white'
+                        // type='antdesgin'
+                    />
                 </View>
             </TouchableOpacity>
         )}
