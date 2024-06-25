@@ -3,6 +3,7 @@ import React from 'react'
 import tw, { style } from 'twrnc';
 import { Icon } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
+import { ChevronRightIcon } from '@heroicons/react/16/solid';
 
 const data = [
     {
@@ -42,7 +43,7 @@ const NavOptions = () => {
                     <Text style={tw`mt-2 text-lg font-semibold`}>{item.title}</Text>
                     <Icon 
                     style={tw`p-2 bg-black rounded-full w-10 mt-4`}
-                        name='arrowright'
+                        name='chevron-right'
                         color='white'
                         type='antdesgin'
                     />
