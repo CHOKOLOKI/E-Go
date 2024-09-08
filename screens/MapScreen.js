@@ -1,11 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 const MapScreen = () => {
   return (
-    <View>
-      <Text>Here is the map screen</Text>
-    </View>
+    <SafeAreaProvider>
+      <View>
+        <Text>Here is the map screen</Text>
+      </View>
+    </SafeAreaProvider>
   )
 }
 
